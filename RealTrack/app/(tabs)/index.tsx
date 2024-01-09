@@ -36,11 +36,14 @@ export default function Home() {
 
   const[projectItems,setProjectItems] = useState <projectTest[]> ([]) 
   function randHex(): string {
-    var r = Math.random()*100%255;
-    var g = Math.random()*100%255;
-    var b = Math.random()*100%255;
-
-    return "rgb("+(r-r%1)+","+(g-g%1)+","+(b-b%1)+")" ;
+    
+    var r = Math.floor(Math.random()*1000%55+200);
+    var g = Math.floor(Math.random()*1000%55+200);
+    var b = Math.floor(Math.random()*1000%55+200);
+      
+    return "rgb("+(r)+","+(g)+","+(b)+")";
+      
+    
   }
 
 
@@ -57,7 +60,7 @@ export default function Home() {
         renderItem={({ item })=>(
           
           <TouchableOpacity>
-          <Text style = {[styles.item,{backgroundColor: item.Colors}]} >
+          <Text style = {[styles.item,{backgroundColor: item.Colors}]} onPress={() => console.log(item)} >
             {item.name}{"\n"}
             Break: {item.break} {"\n"}
             Hours: {item.timeTracked}h/{item.timeGoal}h
