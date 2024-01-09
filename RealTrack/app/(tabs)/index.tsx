@@ -6,22 +6,52 @@ import { setBackgroundColorAsync } from 'expo-system-ui';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { withLayoutContext } from 'expo-router';
 
+class projectTest {
+  name;
+  break;
+  timeTracked;
+  timeGoal;
+  Colors;
+
+  constructor(Name: string,Break: string,TimeTracked: number,TimeGoal: number,Colors: string){
+    this.name = Name;
+    this.break = Break;
+    this.timeTracked = TimeTracked;
+    this.timeGoal = TimeGoal;
+    this.Colors = Colors;
+  }
+}
+
+
+
 export default function Home() {
   const[project,setProject] = useState({
-    name: "Name", 
-    break: "breaktime",
-    timeTracked : 0, 
-    timeGoal:0, 
-    key: "1",
+    name: "Name",
+    break: "breakteime",
+    timeTracked : 0,
+    timeGoal:0,
     Colors:'lightblue'
   }
   );
 
-  const[projectItems,setProjectItems] = useState([])
+  const[projectItems,setProjectItems] = useState <projectTest[]> ([]) 
+  function randHex(): string {
+    
+    var r = Math.floor(Math.random()*1000%55+200);
+    var g = Math.floor(Math.random()*1000%55+200);
+    var b = Math.floor(Math.random()*1000%55+200);
+      
+    return "rgb("+(r)+","+(g)+","+(b)+")";
+      
+    
+  }
 
 
   const handleAddProjects = () => {
-    setProjectItems([...projectItems,project])
+     const test = new projectTest("project","break",1,1,randHex())
+    setProjectItems([...projectItems,test])
+    
+    
   }
   return (
     <View style={styles.container}>
@@ -30,14 +60,15 @@ export default function Home() {
         renderItem={({ item })=>(
           
           <TouchableOpacity>
-          <Text style = {[styles.item,{backgroundColor: item.Colors}]} >
+          <Text style = {[styles.item,{backgroundColor: item.Colors}]} onPress={() => console.log(item)} >
             {item.name}{"\n"}
             Break: {item.break} {"\n"}
             Hours: {item.timeTracked}h/{item.timeGoal}h
-
-
           </Text>
+          
+          
           </TouchableOpacity>
+          
         )}
       />
 
