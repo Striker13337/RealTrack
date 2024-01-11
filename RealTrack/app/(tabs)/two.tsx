@@ -1,14 +1,42 @@
-import { StyleSheet } from 'react-native';
+import { Alert, StyleSheet, Button} from 'react-native';
+import { useState } from 'react';
 
 import EditScreenInfo from '../../components/EditScreenInfo';
-import { Text, View } from '../../components/Themed';
+import { Text, View} from '../../components/Themed';
+import { Calendar, LocaleConfig, CalendarListProps } from "react-native-calendars";
 
 export default function TabTwoScreen() {
+
+  const [selected, setSelected] = useState('');
+  const marked = {
+    "24-01-07": {marked: true}
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
+      <Calendar
+        onDayPress={day=> {setSelected(day.dateString);
+        }}
+        markedDates={{
+          [selected]: {selected: true, disableTouchEvent:true, selectedTextColor: "white", selectedColor: "green"}
+        }}
+        style={{
+          borderWidth: 2,
+          borderColor: "gray",
+        }}
+        theme={{
+          todayTextColor: "green",
+          arrowColor: "green"
+
+        }}
+        firstDay={1}
+        markingType='multi-dot'
+      />
+
+      
+
+      <Button title="Home" onPress={() => Alert.alert("This is a test!")}/>
+
     </View>
   );
 }
