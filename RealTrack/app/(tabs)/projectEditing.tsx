@@ -1,6 +1,4 @@
 import { Button, KeyboardAvoidingView, Pressable, StyleSheet, TouchableOpacity, Vibration } from 'react-native';
-
-import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
 import { useState } from 'react';
 import { TextInput } from 'react-native-gesture-handler';
@@ -12,6 +10,9 @@ function onPressGps() {
 }
 function onPressWlan() {
   console.log("Wlan pressed");
+}
+function onPressadd() {
+  Vibration.vibrate(100)
 }
 
 export default function ProjectEditingScreen() {
@@ -64,7 +65,7 @@ export default function ProjectEditingScreen() {
       />
       <KeyboardAvoidingView style={styles.addButtonWrapper} >
         {/*Using the vibrate function to give feedback on a pressed button*/}
-        <TouchableOpacity onPress={() => Vibration.vibrate(100)} >
+        <TouchableOpacity onPress={() => onPressadd} >
           <View style={styles.addProject}>
             <Text style={styles.addText}>+</Text>
           </View>
