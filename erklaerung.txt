@@ -2,15 +2,23 @@
 # Name Gruppenmitglied 2 und Matrikelnummer:Timur Dag 
 
 # Keywords:
-# Bitte beschreiben Sie Ihre App mit kommagetrennten Keywords. Z.B. bei einer Fitness-App: Fitness, Sport.
+# Time tracking, Projectplanner.
 
 # Erklärung:
+# nach dem befehl npx create-expo-app --template haben wir die template mit navigation genommen daher stammt diese nicht von uns sonder wurde automatisch hinzugefügt.
 # Hiermit versichern wir, dass unsere Abgabe ein Resultat unserer eigenständig erbrachten Leistung ist.
 # Wir erklären hiermit, dass wir das Praktikumsprojekt innerhalb der 2er-Gruppe gemeinsam und selbstständig bearbeitet haben.
 # Ja/Nein [Ja]
 
+
+
 # Alle Anforderungen umgesetzt? Ja/Nein [Nein]
-# Welche Anforderungen fehlen?
+# Die App ist in einem nicht Funktionstüchtigen zustand
+# Die Kern-Anwendungsfälle funktionieren nicht und sind nur teilweise Optisch implimentiert
+# Keine Master-Detail-View
+# Keine Backend-API
+# Keine Sensor anbindung
+
 
 # Individuelle Bewertung gewünscht? Hinweis: Die Bewertung nach eigenem Ermessen behält sich der Dozent vor.
 # Ja/Nein [Nein]
