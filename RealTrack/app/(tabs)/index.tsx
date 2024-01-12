@@ -135,12 +135,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderColor: 'lightgrey',
     borderWidth: 1,
-
-
-
-
   },
   addText:{
-
+    fontSize : 32,
+    color: 'black',
   }
 });

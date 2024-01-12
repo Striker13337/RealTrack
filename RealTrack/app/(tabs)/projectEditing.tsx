@@ -1,4 +1,4 @@
-import { Button, KeyboardAvoidingView, Pressable, StyleSheet, TouchableOpacity } from 'react-native';
+import { Button, KeyboardAvoidingView, Pressable, StyleSheet, TouchableOpacity, Vibration } from 'react-native';
 
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
@@ -71,7 +71,7 @@ export default function ProjectEditingScreen() {
     />
     <KeyboardAvoidingView  style={styles.addButtonWrapper} >
       
-      <TouchableOpacity >
+      <TouchableOpacity onPress={()=> Vibration.vibrate(100)} >
         <View style = {styles.addProject}>
           <Text style = {styles.addText}>+</Text>
         </View>
@@ -84,7 +84,11 @@ export default function ProjectEditingScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    backgroundColor: '#E8EAED',
+    height: '100%',
+    flexDirection:'column',
+    alignItems: 'center',
+    justifyContent: 'center',
     
   },
   title: {
@@ -104,6 +108,7 @@ const styles = StyleSheet.create({
   },
   text:{
     fontSize : 32,
+    color: 'black',
 
   },
   addProject:{
@@ -119,7 +124,8 @@ const styles = StyleSheet.create({
 
   },
   addText:{
-
+    fontSize : 32,
+    color: 'black',
   },
   addButtonWrapper:{
     position: 'absolute',
