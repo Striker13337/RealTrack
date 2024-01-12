@@ -1,0 +1,19 @@
+# Name Gruppenmitglied 1 und Matrikelnummer:Robin Böllhoff 10011241
+# Name Gruppenmitglied 2 und Matrikelnummer:Timur Dag 
+
+# Keywords:
+# Bitte beschreiben Sie Ihre App mit kommagetrennten Keywords. Z.B. bei einer Fitness-App: Fitness, Sport.
+
+# Erklärung:
+# Hiermit versichern wir, dass unsere Abgabe ein Resultat unserer eigenständig erbrachten Leistung ist.
+# Wir erklären hiermit, dass wir das Praktikumsprojekt innerhalb der 2er-Gruppe gemeinsam und selbstständig bearbeitet haben.
+# Ja/Nein [Ja]
+
+# Alle Anforderungen umgesetzt? Ja/Nein [Nein]
+# Welche Anforderungen fehlen?
+
+# Individuelle Bewertung gewünscht? Hinweis: Die Bewertung nach eigenem Ermessen behält sich der Dozent vor.
+# Ja/Nein [Nein]
+
+# Falls eine individuelle Bewertung innerhalb der Gruppe gewünscht ist, sollten Sie im Folgenden genau dokumentieren, wer was gemacht hat.
+
